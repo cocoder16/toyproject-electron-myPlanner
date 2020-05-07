@@ -1,0 +1,41 @@
+@charset "utf-8";
+body { font-family: yr; background-color: #eee; }
+table { border-collapse: collapse; margin-top: 5px; }
+
+#leftWrapper { width:30%; float:left; margin-top: 30px; }
+#rightWrapper { width:70%; float:left; margin-top: 30px; }
+
+/*left*/
+.percentbox { width: 200px; margin: 20px auto; font-size: 1.1rem; text-align: center; line-height: 1.5; }
+
+/*right*/
+.inputbox { margin: 0 0 20px; }
+.addPlan { width:85%; margin:auto; height: 20px; font-family: yr; font-size: 1rem; }
+.addbtn { width:10%; height: 30px; font-family: yr; font-size: 1rem; }
+
+#list { width:90%; }
+#list tr { border-top: 1px solid black; border-bottom: 1px solid black; }
+#list input[type='text'] { width: 100%; border: none; font-family: yr; font-size: 1.2rem; padding: 5px 1px 5px 1px; }
+#list input[type='text']:focus { outline: 2px dotted gold; }
+#list .delete { width: 20px; }
+#list input[type='button'] { visibility: hidden; box-shadow: inset 0 0 3px black; height: 20px; }
+#list input[type='button']:active { background-color: #ccc; outline: none; }
+#list .checkbox { width: 20px; }
+#list input[type='checkbox'] { display: none; }
+#list input[type='checkbox'] + label { display: inline-block; width: 20px; height: 20px; cursor: pointer; vertical-align: middle;}
+
+#list.a input[type='checkbox'] + label {border: 2px solid rgb(58, 193, 0);  }
+#list.a input[type='checkbox']:checked + label { background-color: rgb(58, 193, 0); }
+#list.a input[type='checkbox']:active + label { background-color: rgb(26, 88, 0); }
+
+#list.c input[type='checkbox'] + label {border: 2px solid blue; }
+#list.c input[type='checkbox']:checked + label { background-color: blue; }
+#list.c input[type='checkbox']:active + label { background-color: rgb(0, 0, 154); }
+
+#list.b input[type='checkbox'] + label {border: 2px solid gold; }
+#list.b input[type='checkbox']:checked + label { background-color: gold; }
+#list.b input[type='checkbox']:active + label { background-color: rgb(147, 125, 0); }
+
+#list.d input[type='checkbox'] + label {border: 2px solid red; }
+#list.d input[type='checkbox']:checked + label { background-color: red; }
+#list.d input[type='checkbox']:active + label { background-color: rgb(133, 0, 0); }

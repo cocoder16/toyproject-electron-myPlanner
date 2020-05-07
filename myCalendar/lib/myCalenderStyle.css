@@ -1,0 +1,31 @@
+@charset "utf-8";
+#myCalendar { margin: auto; width: 261px; border-radius: 7px; font-family: yr; cursor: default; }
+#myCalendar.a { background-color: rgba(176, 243, 201, 0.3); border: 2px solid rgb(124, 226, 162); }
+#myCalendar.b { background-color: rgba(248, 243, 172, 0.3); border: 2px solid rgb(197, 190, 91); }
+#myCalendar.c { background-color: rgba(172, 248, 246, 0.3); border: 2px solid rgb(86, 202, 199); }
+#myCalendar.d { background-color: rgba(248, 172, 232, 0.3); border: 2px solid rgb(211, 89, 185); }
+
+#myCalendar input { margin: 4px; }
+
+#myCalendar .controlWrap { display: table; text-align: center; border-spacing: 4px; font-weight: bolder; font-size: 1.3rem; }
+#myCalendar .btnCell { display: table-cell; }
+#myCalendar .prev, #myCalendar .next { background-size: 60% 60%; background-repeat: no-repeat; background-position: center center;  width: 25px; }
+#myCalendar .prev { background-image: url(./images/arrow_left.png); }
+#myCalendar .next { background-image: url(./images/arrow_right.png); }
+#myCalendar .prev:focus { outline: none; }
+#myCalendar .next:focus { outline: none; }
+
+#myCalendar .output { display: table-cell; position: relative; }
+#myCalendar .output.year { width: 60px; }
+#myCalendar .output.month { width: 40px; }
+#myCalendar .output span { position: absolute; margin: auto; left: 0; right: 0; line-height: 1.5}
+
+#myCalendar table { border-collapse: collapse; margin: 0 4px 0 4px; }
+#myCalendar th, #myCalendar td { border: 1px solid black; width: 25px; height: 35px; padding: 0 5px 0 5px; }
+/* #myCalendar .tr {} */
+#myCalendar .selected { outline: red solid 3px; }
+#myCalendar .todayBtn { font-family: yr; font-size: 1rem; background-color: rgb(240, 240, 240); }
+@font-face {
+    font-family: yr;   
+    src: url("./yr.ttf");
+}

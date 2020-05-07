@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>My Planner</title>
+    <link rel="stylesheet" href="./myCalendar/lib/myCalenderStyle.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="leftWrapper">
+        <script src="./myCalendar/lib/myCalender.js"></script>
+        <script>
+            myCalendarCustom.selectPostTreat = function(){
+                reader();
+            };
+            myCalendarCustom.goTodayPostTreat = function(){
+                reader();
+            };
+            myCalendarCustom.movePostTreat = function(){
+                viewRate();
+            }
+            myCalendar.createCalendar();
+            myCalendar.showCalendar();
+        </script>
+        <!--달성률-->
+        <div class='percentbox'>
+            <span>전체 목표달성률<br><span id="percent" class='achieve'></span></span><br>
+            <span>최근 30일 목표달성률<br><span id="percentM" class='achieve'></span></span><br>
+            <span>최근 7일 목표달성률<br><span id="percentW" class='achieve'></span></span><br>
+        </div>
+    </div>
+    <div id="rightWrapper">
+        <!--할일입력-->
+        <h2>Add Plan</h2>
+        <div class='inputbox'>
+            <input type="text" class='addPlan' id="plan" maxlength=70 onkeyup="enterCreate()">
+            <input type="button" class='addbtn' value="add" onclick="create()">
+        </div>
+        <!-- 리스트 동적 생성-->
+        <table id="list" class='a'>
+        </table>
+    </div>
+    
+    <script src='./js/environment.js'></script>
+    <script src='./js/fileController.js'></script>
+    <script src='./js/memento.js'></script>
+    <script src='./js/renderer.js'></script>
+    <script src='./js/mainController.js'></script>
+</body>

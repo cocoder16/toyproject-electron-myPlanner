@@ -12,6 +12,13 @@ npm start
 ```
 ## Build
 This support only windows x32 or x64. But a little adjustment in package.json would make it work on other OS.
+
+For preventing text encoding error, 1 file NsisTarget.js should be changed by new one.
+```
+move ./error/NsisTarget.js ./node_modules/app-builder-lib/out/targets/nsis/NsisTarget.js
+```
+
+Build on windows x32, x64.
 ```
 yarn dist
 ```
